@@ -11,19 +11,23 @@ function add(taskName) {
 }
 
 /**
- * タスクの一覧の配列を取得する
- * @returns {string[]}
+ * タスク名と完了したかどうか真偽値が含まれるオブジェクトを受け取り、完了したかを返す
+ * @param {object} task
+ * @return {boolean} 完了したかどうか
  */
-function list() {
-  return tasks
-    .filter(task => !task.isDone)
-    .map(task => task.name);
+function isDone (task) {
+  return task. isDone;
 }
 
 /**
- * タスクを完了状態にする
- * @param {string} taskName
- */
+* タスクの一覧の配列を取得する
+* @returns {string[]}
+  */
+function list() {
+return tasks
+ .filter(task => !isDone(task))
+ .map(task => task.name);
+}
 function done(taskName) {
   const indexFound = tasks.findIndex(task => task.name === taskName);
   if (indexFound !== -1) {
